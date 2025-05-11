@@ -1,0 +1,21 @@
+services:
+  db:
+    image: postgres:14
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: app_db
+    volumes:
+      - db_data:/var/lib/postgresql/data
+
+  fastapi-app:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      DATABASE_URL: postgresql://user:password@db:5432/app_db
+    depends_on:
+      - db
+
+volumes:
+  db_data:
