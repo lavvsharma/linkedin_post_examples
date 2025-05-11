@@ -9,21 +9,33 @@ Each folder is dedicated to a specific post or series, with step-by-step code to
 ```
 linkedin_post_examples/
 └── python/
-└── fastapi_docker_example/
+    ├── fastapi_docker_example/
+    └── fastapi_postgres_docker_example/
 ```
 
-## 🚀 Featured Example
+## 🚀 Featured Examples
 
 ### 🔹 [`fastapi_docker_example`](./python/fastapi_docker_example)
 
-This is a **minimal Dockerized FastAPI app** demonstrating how to:
+A **minimal Dockerized FastAPI app** demonstrating how to:
 
-- Write a simple FastAPI application
+- Build a simple FastAPI application
 - Containerize it using Docker
-- Use Docker Compose to manage the container
+- Use Docker Compose to manage the service
 - Access the app at `http://localhost:8000`
 
-📌 This example is part of my **5-part Docker series** on LinkedIn and the blog. It’s designed for developers who are new to Docker and want to learn how to containerize Python web applications with minimal setup.
+📌 Part of my **5-part Docker series** — ideal for beginners looking to get hands-on with containerizing Python apps.
+
+### 🔹 [`fastapi_postgres_docker_example`](./python/fastapi_postgres_docker_example)
+
+An extended version of the above app that integrates a **PostgreSQL database using Docker Compose**. This example shows how to:
+
+- Add a database service to your container network
+- Connect FastAPI to PostgreSQL using SQLAlchemy
+- Use Docker volumes to persist DB data
+- Build a real-world, multi-container app setup
+
+🔄 Includes a `/ping-db` endpoint to verify database connection.
 
 ## 📌 Why This Repo Exists
 
@@ -33,9 +45,17 @@ If you're following my posts and want to go deeper—this is the place!
 
 ## 🛠️ Upcoming Examples
 
-- Docker Networking & Volumes
+- Docker Networking & Volumes (already demonstrated in `fastapi_postgres_docker_example`)
 - Deploying Docker Apps to the Cloud
+- Local LLM setups & Vector DBs
+- Python automation utilities
+- Microservice-based FastAPI projects
 
 ## 🙌 Contributions & Feedback
 
-Spotted something off? Got an idea for another example? Feel free to open an issue or a pull request.
+Spotted something off? Got an idea for another example?  
+Feel free to open an issue or a pull request — always open to feedback and collaboration!
+
+## 📄 License
+
+All content in this repository is available under the MIT License.
